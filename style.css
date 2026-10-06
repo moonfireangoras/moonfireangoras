@@ -129,3 +129,38 @@ footer{padding:46px 0;text-align:center;color:#b9a8b7;border-top:1px solid rgba(
   .lead{font-size:1rem}
   .hero:before,.hero:after{letter-spacing:.35em;font-size:.85rem}
 }
+/* Mobile homepage refinements */
+@media (max-width: 560px) {
+
+  .hero-inner {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+
+  .logo {
+    width: min(300px, 76vw);
+  }
+
+  .hero h1 {
+    font-size: 2.65rem;
+    line-height: 1.08;
+    margin-top: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero h1 span {
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
+  .tag {
+    font-size: 1.08rem;
+    margin-top: 12px;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 24px;
+  }
+}
