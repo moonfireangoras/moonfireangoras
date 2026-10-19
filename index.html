@@ -3,121 +3,455 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Moonfire Angoras | Seattle, Washington</title>
-  <meta name="description" content="Moonfire Angoras is a family-raised English Angora rabbitry in the Seattle, Washington area.">
+
+  <meta
+    name="description"
+    content="Moonfire Angoras is a family-raised English Angora rabbitry in Seattle, Washington.">
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* ---------- LEFT DROPDOWN MENU ---------- */
+
+    nav .wrap {
+      position: relative;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand {
+      text-align: center;
+    }
+
+    .menu-wrap {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+    }
+
+    .menu-button {
+      background: rgba(14,10,20,.96);
+      border: 1px solid rgba(224,173,112,.45);
+      border-radius: 999px;
+
+      color: #f7eadc;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: .95rem;
+
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+
+      position: absolute;
+      left: 0;
+      top: calc(100% + 10px);
+
+      width: 205px;
+
+      padding: 10px;
+
+      background: rgba(14,10,20,.98);
+
+      border: 1px solid rgba(224,173,112,.45);
+      border-radius: 16px;
+
+      box-shadow: 0 15px 35px rgba(0,0,0,.45);
+
+      z-index: 200;
+    }
+
+    .dropdown.open {
+      display: block;
+    }
+
+    .dropdown a {
+      display: block;
+
+      padding: 11px 14px;
+
+      color: #dbc7d9;
+      text-decoration: none;
+
+      border-radius: 10px;
+
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .dropdown a:hover {
+      background: rgba(224,173,112,.12);
+      color: #f2d2a2;
+    }
+
+
+    /* ---------- CENTER THE HOMEPAGE ---------- */
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 900px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      padding-left: 20px;
+      padding-right: 20px;
+
+      text-align: center;
+    }
+
+
+    /* ---------- LARGER CENTERED LOGO ---------- */
+
+    .hero .logo {
+      display: block;
+
+      width: min(600px, 92vw);
+      max-width: 100%;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      border-radius: 50%;
+    }
+
+
+    /* ---------- ALL TEXT USES SAME CENTER ---------- */
+
+    .home-info {
+      width: 100%;
+      max-width: 720px;
+
+      margin: 22px auto 0;
+
+      text-align: center;
+    }
+
+
+    /* English Angoras */
+
+    .home-title {
+      margin: 0 auto 14px;
+
+      color: #d5b8db;
+
+      font-size: clamp(1.65rem, 6vw, 2.3rem);
+      font-style: italic;
+      font-weight: normal;
+
+      line-height: 1.15;
+
+      text-align: center;
+    }
+
+
+    /* Location and registration */
+
+    .home-details {
+      width: 100%;
+
+      margin: 0 auto 26px;
+
+      color: #d5b8db;
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+
+      text-align: center;
+    }
+
+
+    /* Description */
+
+    .home-description {
+      width: 100%;
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      color: #f7eadc;
+
+      font-size: 1.05rem;
+      line-height: 1.75;
+
+      text-align: center;
+    }
+
+
+    /* Decorative divider */
+
+    .home-divider {
+      margin: 32px auto 10px;
+
+      color: #e0ad70;
+
+      font-size: 1.25rem;
+
+      text-align: center;
+      letter-spacing: .5rem;
+    }
+
+
+    /* ---------- CENTERED FOOTER ---------- */
+
+    footer .wrap {
+      width: 100%;
+      max-width: 720px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+
+    footer p,
+    footer .moon {
+      text-align: center;
+    }
+
+
+    /* ---------- PHONE ADJUSTMENTS ---------- */
+
+    @media (max-width: 560px) {
+
+      nav .wrap {
+        min-height: 72px;
+      }
+
+      .brand {
+        font-size: .82rem;
+        letter-spacing: .12em;
+      }
+
+      .menu-wrap {
+        left: 10px;
+      }
+
+      .menu-button {
+        font-size: .82rem;
+        padding: 7px 11px;
+      }
+
+      .dropdown {
+        width: 190px;
+      }
+
+      .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero .logo {
+        width: min(520px, 96vw);
+      }
+
+      .home-title {
+        font-size: 1.65rem;
+      }
+
+      .home-details {
+        font-size: 1rem;
+      }
+
+      .home-description {
+        max-width: 94%;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
+
+<!-- NAVIGATION -->
+
 <nav>
   <div class="wrap">
-    <a class="brand" href="index.html">☾ Moonfire Angoras</a>
 
-    <div class="links">
-      <a href="about.html">About</a>
-      <a href="angoras.html">Our Angoras</a>
-      <a href="available.html">Available</a>
-      <a href="litters.html">Litters</a>
-      <a href="care.html">Care</a>
-      <a href="policies.html">Policies</a>
-      <a href="contact.html">Contact</a>
+    <div class="menu-wrap">
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu">
+        ☰ Menu
+      </button>
+
+      <div
+        class="dropdown"
+        id="site-menu">
+
+        <a href="about.html">About</a>
+        <a href="angoras.html">Our Angoras</a>
+        <a href="available.html">Available</a>
+        <a href="litters.html">Litters</a>
+        <a href="care.html">Care</a>
+        <a href="policies.html">Policies</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
     </div>
+
+
+    <a
+      class="brand"
+      href="index.html">
+      ☾ Moonfire Angoras
+    </a>
+
   </div>
 </nav>
+
+
+
+<!-- HOMEPAGE -->
 
 <main>
 
   <section class="hero">
+
     <div class="hero-inner">
+
+
+      <!-- LARGE CENTERED LOGO -->
 
       <img
         class="logo"
         src="logo.png"
         alt="Moonfire Angoras logo">
 
-      <h1>
-   <span style="color:#d5b8db;">Magical Bunnies</span>
-      </h1>
 
-      <div class="tag">
-        English Angoras • Seattle, Washington
-      </div>
+      <!-- CENTERED INFORMATION -->
 
-      <p class="lead">
-        A family-raised English Angora rabbitry where health and wellbeing
-        come first, with an emphasis on sound temperament and preserving
-        the beautiful qualities of the breed standard.
-      </p>
-
-    </div>
-  </section>
+      <div class="home-info">
 
 
-  <section class="home-links">
-    <div class="wrap">
+        <h1 class="home-title">
+          English Angoras
+        </h1>
 
-      <div class="grid">
 
-        <a class="tile" href="about.html">
-          <h2>About Moonfire</h2>
-          <p>
-            Learn about our philosophy and the values behind
-            Moonfire Angoras.
-          </p>
-        </a>
+        <div class="home-details">
 
-        <a class="tile" href="angoras.html">
-          <h2>Our Angoras</h2>
-          <p>
-            Meet the English Angoras who make Moonfire special.
-          </p>
-        </a>
+          Seattle, Washington, USA
 
-        <a class="tile" href="available.html">
-          <h2>Available Rabbits</h2>
-          <p>
-            See current and future availability from Moonfire Angoras.
-          </p>
-        </a>
+          <br>
 
-        <a class="tile" href="litters.html">
-          <h2>Litters</h2>
-          <p>
-            Follow planned pairings, upcoming litters and Moonfire babies.
-          </p>
-        </a>
+          ARBA and NARBA registered
 
-        <a class="tile" href="care.html">
-          <h2>Angora Care</h2>
-          <p>
-            Learn more about caring for the extraordinary English Angora.
-          </p>
-        </a>
+        </div>
 
-        <a class="tile" href="policies.html">
-          <h2>Policies</h2>
-          <p>
-            Information for families interested in welcoming
-            a Moonfire Angora.
-          </p>
-        </a>
+
+        <p class="home-description">
+
+          Our bunnies are family-raised in enrichment-focused habitats.
+          The health and wellbeing of the animals is our priority, with an
+          emphasis on gentle temperament and preserving the beautiful
+          qualities of the breed standard.
+
+        </p>
+
+
+        <div class="home-divider">
+          ☾ ✦ ☽
+        </div>
+
 
       </div>
 
     </div>
+
   </section>
 
 </main>
 
 
+
+<!-- FOOTER -->
+
 <footer>
+
   <div class="wrap">
-    <div class="moon">☾ ✦ ☽</div>
-    <p>Moonfire Angoras • Seattle, Washington</p>
-    <p>Magical Bunnies.</p>
+
+    <p>
+      Moonfire Angoras • Seattle, Washington
+    </p>
+
   </div>
+
 </footer>
+
+
+
+<!-- DROPDOWN MENU SCRIPT -->
+
+<script>
+
+  const menuButton =
+    document.querySelector('.menu-button');
+
+  const dropdown =
+    document.querySelector('.dropdown');
+
+
+  menuButton.addEventListener(
+    'click',
+    function(event) {
+
+      event.stopPropagation();
+
+      const isOpen =
+        dropdown.classList.toggle('open');
+
+      menuButton.setAttribute(
+        'aria-expanded',
+        isOpen
+      );
+
+    }
+  );
+
+
+  document.addEventListener(
+    'click',
+    function(event) {
+
+      if (!event.target.closest('.menu-wrap')) {
+
+        dropdown.classList.remove('open');
+
+        menuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+      }
+
+    }
+  );
+
+</script>
+
 
 </body>
 </html>
