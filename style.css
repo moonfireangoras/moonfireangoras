@@ -168,3 +168,126 @@ footer{padding:46px 0;text-align:center;color:#b9a8b7;border-top:1px solid rgba(
     margin-top: 24px;
   }
 }
+/* ========================================
+   OUR ANGORAS PAGE - DROPDOWN NAVIGATION
+   ======================================== */
+
+.dropdown-nav {
+  position: relative;
+  z-index: 100;
+}
+
+.dropdown-nav .nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  align-items: center;
+}
+
+.dropdown-nav .brand {
+  grid-column: 2;
+  justify-self: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.menu-dropdown {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  justify-self: start;
+}
+
+.menu-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  border: 1px solid rgba(224, 173, 112, .45);
+  border-radius: 999px;
+  color: #f7eadc;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.menu-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-items {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 190px;
+  padding: 10px;
+  border: 1px solid rgba(224, 173, 112, .35);
+  border-radius: 16px;
+  background: rgba(8, 6, 13, .98);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
+}
+
+.menu-items a {
+  display: block;
+  padding: 10px 14px;
+  color: #f7eadc;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.menu-items a:hover {
+  background: rgba(224, 173, 112, .12);
+  color: #e0ad70;
+}
+
+
+/* ========================================
+   OUR ANGORAS - COMPACT SPACING
+   ======================================== */
+
+.pagehead {
+  padding-top: 45px;
+  padding-bottom: 38px;
+  min-height: 0;
+}
+
+.pagehead .wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.pagehead p {
+  margin-bottom: 0;
+}
+
+main .section {
+  padding-top: 38px;
+}
+
+
+/* Mobile */
+@media (max-width: 560px) {
+
+  .dropdown-nav .nav-inner {
+    grid-template-columns: 120px 1fr 120px;
+    padding: 18px 20px;
+  }
+
+  .dropdown-nav .brand {
+    font-size: .94rem;
+  }
+
+  .menu-dropdown summary {
+    padding: 9px 14px;
+    font-size: .95rem;
+  }
+
+  .pagehead {
+    padding-top: 38px;
+    padding-bottom: 30px;
+  }
+
+  main .section {
+    padding-top: 30px;
+  }
+}
